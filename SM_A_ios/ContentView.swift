@@ -27,12 +27,14 @@ struct ContentView: View {
             ZStack {
                 Color.orange.ignoresSafeArea()
                 VStack{
-                    Image("tribe-logo")
+                    Image("TribeFullTransparent")
                         .resizable()
                         .scaledToFit()
-                        .frame(width:250, height: 250)
+                        .frame(width:350, height: 350)
+                        .offset(y:75)
     //                    .multilineTextAlignment(.leading)
-//                        .padding()
+                        .padding()
+                        
                 
                     Spacer()
                 }
@@ -92,5 +94,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewDevice("iPhone 11")
     }
 }
