@@ -14,6 +14,7 @@
 		A763652628C97D120052F5DE /* SM_A_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763652528C97D120052F5DE /* SM_A_iosTests.swift */; };
 		A763653028C97D120052F5DE /* SM_A_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763652F28C97D120052F5DE /* SM_A_iosUITests.swift */; };
 		A763653228C97D120052F5DE /* SM_A_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763653128C97D120052F5DE /* SM_A_iosUITestsLaunchTests.swift */; };
+		A763653F28CF56D90052F5DE /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763653E28CF56D90052F5DE /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		A763652B28C97D120052F5DE /* SM_A_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SM_A_iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A763652F28C97D120052F5DE /* SM_A_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SM_A_iosUITests.swift; sourceTree = "<group>"; };
 		A763653128C97D120052F5DE /* SM_A_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SM_A_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A763653E28CF56D90052F5DE /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		A763654228CF64140052F5DE /* My project-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "My project-1.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,7 @@
 			children = (
 				A763651428C97D090052F5DE /* SM_A_iosApp.swift */,
 				A763651628C97D090052F5DE /* ContentView.swift */,
+				A763653E28CF56D90052F5DE /* RegisterView.swift */,
 				A763651828C97D110052F5DE /* Assets.xcassets */,
 				A763651A28C97D110052F5DE /* Preview Content */,
 			);
@@ -105,6 +109,7 @@
 		A763651A28C97D110052F5DE /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				A763654228CF64140052F5DE /* My project-1.png */,
 				A763651B28C97D110052F5DE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -257,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A763653F28CF56D90052F5DE /* RegisterView.swift in Sources */,
 				A763651728C97D090052F5DE /* ContentView.swift in Sources */,
 				A763651528C97D090052F5DE /* SM_A_iosApp.swift in Sources */,
 			);
@@ -417,6 +423,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SM_A_ios/Preview Content\"";
+				DEVELOPMENT_TEAM = 4RP9V6BFVF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -445,6 +452,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SM_A_ios/Preview Content\"";
+				DEVELOPMENT_TEAM = 4RP9V6BFVF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
