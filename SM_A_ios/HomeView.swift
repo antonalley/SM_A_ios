@@ -7,9 +7,141 @@
 
 import SwiftUI
 
+extension AnyTransition {
+    static var moveFadeDown: AnyTransition {
+        // TODO , not working great
+        .asymmetric(
+            insertion: AnyTransition.move(edge: .bottom),
+            removal: AnyTransition.move(edge: .top)
+        )
+        
+    }
+}
+
 struct HomeView: View {
-    var body: some View {
-        Text("Welcome Home")
+    @Environment(\.colorScheme) var colorScheme
+    @State private var isHomeView = true
+    @State private var isDoSomethingView = false
+    @State private var isSearchView = false
+    @State var searchText = ""
+    
+    var body: some View{
+//        NavigationView{
+        home_view
+//            NavigationLink(destination: DoSomethingView(), isActive: $isDoSomethingView){
+//            }
+//            NavigationLink(destination: SearchView(), isActive: $isSearchView){
+//            }
+////            if isDoSomethingView {
+////                DoSomethingView()
+////            }
+////            if isSearchView {
+////                SearchView().transition(.moveFadeDown)
+////            }
+//        }
+    }
+    
+    var home_view: some View {
+        NavigationView{
+            VStack{
+                NavigationLink(destination:DoSomethingView()){
+                    Text("Do something...                            +").foregroundColor(Color.white)
+                        .frame(width:330, height:50)
+                        .background(Color.blue.opacity(0.9))
+                        .cornerRadius(10)
+                        .padding()
+                }
+                
+                
+                VStack{
+                    ScrollView{
+                        ForEach(get_calendar()){ dosumm in
+                            HStack{
+                                VStack{
+                                    Text(dosumm.name).font(.title2).foregroundColor(Color.white)
+                                    Text(dosumm.time)
+                                }
+                                Text("@\(dosumm.location)")
+                            }.padding()
+                                .frame(width: 300)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .fill(Color.white.opacity(0.2))
+                                    //                                .shadow(color: .black, radius:6, x:4, y:4)
+                                )
+                                .cornerRadius(10)
+                            
+                        }.foregroundColor(Color.white)
+                    }.frame(height:300)
+                }.padding()
+                    .background(Color.orange)
+                    .frame(width:330)
+                    .cornerRadius(10)
+                
+                NavigationLink(destination: SearchView()) {
+                    HStack{
+                        Image(systemName: "magnifyingglass").padding()
+                        Text("Search...")
+                        Spacer()
+                    }.foregroundColor(Color.gray)
+                        .frame(width:330, height:50)
+                        .background(colorScheme == .dark ? Color.white.opacity(0.1) : Color.black.opacity(0.1))
+                        .cornerRadius(10)
+                        .padding()
+                }
+                
+                
+            }
+        }
+        
+    }
+    
+    func get_calendar() -> Array<Dosumm>{
+        //TODO Get from backend
+        return [
+            Dosumm(
+                id: 1,
+                name: "Pickup Vollyball",
+                location: "Glenwood courts",
+                time: "Th 7pm",
+                who: "any"
+            ),
+            Dosumm(
+                id: 2,
+                name: "Movie Night",
+                location: "Glenwood apt 114",
+                time: "Fri 8pm",
+                who: "any"
+            ),
+            Dosumm(
+                id: 3,
+                name: "Hike Mt timp",
+                location: "AF Canyon trailhead",
+                time: "SA 9am",
+                who: "any"
+            ),
+            Dosumm(
+                id: 4,
+                name: "Pickup Vollyball",
+                location: "Glenwood courts",
+                time: "Th 7pm",
+                who: "any"
+            ),
+            Dosumm(
+                id: 5,
+                name: "Movie Night",
+                location: "Glenwood apt 114",
+                time: "Fri 8pm",
+                who: "any"
+            ),
+            Dosumm(
+                id: 6,
+                name: "Hike Mt timp",
+                location: "AF Canyon trailhead",
+                time: "SA 9am",
+                who: "any"
+            ),
+        ]
     }
 }
 

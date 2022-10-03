@@ -16,12 +16,15 @@ struct LoginView: View {
     @State private var user: User? = nil
     
     var body: some View {
-        if isRegisterPage {
-            // go to register
-            RegisterView()
-        } else if isLoginPage {
-            login
-        }
+        // TODO check if already logged in
+        HomeView()
+//        if isRegisterPage {
+//            // go to register
+//            RegisterView()
+//        } else if isLoginPage {
+////            login
+//            AddInterests()
+//        }
     }
     var login: some View {
         NavigationView {

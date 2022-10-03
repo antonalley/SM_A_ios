@@ -7,6 +7,15 @@
 
 import Foundation
 
+struct Dosumm: Codable, Hashable, Identifiable {
+    var id: Int
+    var name: String
+    var location: String
+    var time: String
+    var who: String // TODO Will change, maybe a different struct?
+    
+}
+
 struct Interest: Codable, Hashable, Identifiable {
     var id: Int
     var name: String

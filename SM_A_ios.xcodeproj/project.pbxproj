@@ -19,6 +19,8 @@
 		A77E3EAE28D5F02300096421 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A77E3EAD28D5F02300096421 /* HomeStoryboard.storyboard */; };
 		A77E3EB028D5F10100096421 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E3EAF28D5F10100096421 /* HomeView.swift */; };
 		A77E3EB228D5F14100096421 /* AddInterests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E3EB128D5F14100096421 /* AddInterests.swift */; };
+		A7E682F828E5C808001D4B01 /* DoSomethingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E682F728E5C808001D4B01 /* DoSomethingView.swift */; };
+		A7E682FA28E6A7E6001D4B01 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E682F928E6A7E6001D4B01 /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		A77E3EAD28D5F02300096421 /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
 		A77E3EAF28D5F10100096421 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A77E3EB128D5F14100096421 /* AddInterests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInterests.swift; sourceTree = "<group>"; };
+		A7E682F728E5C808001D4B01 /* DoSomethingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoSomethingView.swift; sourceTree = "<group>"; };
+		A7E682F928E6A7E6001D4B01 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 				A763654328D201850052F5DE /* userInfo.swift */,
 				A77E3EAD28D5F02300096421 /* HomeStoryboard.storyboard */,
 				A77E3EAF28D5F10100096421 /* HomeView.swift */,
+				A7E682F728E5C808001D4B01 /* DoSomethingView.swift */,
+				A7E682F928E6A7E6001D4B01 /* SearchView.swift */,
 			);
 			path = SM_A_ios;
 			sourceTree = "<group>";
@@ -284,8 +290,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A763654428D201860052F5DE /* userInfo.swift in Sources */,
+				A7E682F828E5C808001D4B01 /* DoSomethingView.swift in Sources */,
 				A77E3EB228D5F14100096421 /* AddInterests.swift in Sources */,
 				A763653F28CF56D90052F5DE /* RegisterView.swift in Sources */,
+				A7E682FA28E6A7E6001D4B01 /* SearchView.swift in Sources */,
 				A763651728C97D090052F5DE /* LoginView.swift in Sources */,
 				A77E3EB028D5F10100096421 /* HomeView.swift in Sources */,
 				A763651528C97D090052F5DE /* SM_A_iosApp.swift in Sources */,
