@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A763651528C97D090052F5DE /* SM_A_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763651428C97D090052F5DE /* SM_A_iosApp.swift */; };
+		A71AE8AD28EB0EE6007CEC85 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AE8AC28EB0EE6007CEC85 /* HeaderView.swift */; };
+		A763651528C97D090052F5DE /* LonomoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763651428C97D090052F5DE /* LonomoApp.swift */; };
 		A763651728C97D090052F5DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763651628C97D090052F5DE /* LoginView.swift */; };
 		A763651928C97D110052F5DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A763651828C97D110052F5DE /* Assets.xcassets */; };
 		A763651C28C97D110052F5DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A763651B28C97D110052F5DE /* Preview Assets.xcassets */; };
-		A763652628C97D120052F5DE /* SM_A_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763652528C97D120052F5DE /* SM_A_iosTests.swift */; };
-		A763653028C97D120052F5DE /* SM_A_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763652F28C97D120052F5DE /* SM_A_iosUITests.swift */; };
-		A763653228C97D120052F5DE /* SM_A_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763653128C97D120052F5DE /* SM_A_iosUITestsLaunchTests.swift */; };
+		A763652628C97D120052F5DE /* LonomoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763652528C97D120052F5DE /* LonomoTests.swift */; };
+		A763653028C97D120052F5DE /* LonomoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763652F28C97D120052F5DE /* LonomoUITests.swift */; };
+		A763653228C97D120052F5DE /* LonomoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763653128C97D120052F5DE /* LonomoUITestsLaunchTests.swift */; };
 		A763653F28CF56D90052F5DE /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763653E28CF56D90052F5DE /* RegisterView.swift */; };
 		A763654428D201860052F5DE /* userInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763654328D201850052F5DE /* userInfo.swift */; };
 		A77E3EAE28D5F02300096421 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A77E3EAD28D5F02300096421 /* HomeStoryboard.storyboard */; };
 		A77E3EB028D5F10100096421 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E3EAF28D5F10100096421 /* HomeView.swift */; };
 		A77E3EB228D5F14100096421 /* AddInterests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E3EB128D5F14100096421 /* AddInterests.swift */; };
-		A7E682F828E5C808001D4B01 /* DoSomethingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E682F728E5C808001D4B01 /* DoSomethingView.swift */; };
+		A7E682F828E5C808001D4B01 /* CreatePlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E682F728E5C808001D4B01 /* CreatePlanView.swift */; };
 		A7E682FA28E6A7E6001D4B01 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E682F928E6A7E6001D4B01 /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,23 +42,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A763651128C97D090052F5DE /* SM_A_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SM_A_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A763651428C97D090052F5DE /* SM_A_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SM_A_iosApp.swift; sourceTree = "<group>"; };
+		A71AE8AC28EB0EE6007CEC85 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		A763651128C97D090052F5DE /* Lonomo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lonomo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A763651428C97D090052F5DE /* LonomoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LonomoApp.swift; sourceTree = "<group>"; };
 		A763651628C97D090052F5DE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A763651828C97D110052F5DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A763651B28C97D110052F5DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A763652128C97D120052F5DE /* SM_A_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SM_A_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A763652528C97D120052F5DE /* SM_A_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SM_A_iosTests.swift; sourceTree = "<group>"; };
-		A763652B28C97D120052F5DE /* SM_A_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SM_A_iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A763652F28C97D120052F5DE /* SM_A_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SM_A_iosUITests.swift; sourceTree = "<group>"; };
-		A763653128C97D120052F5DE /* SM_A_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SM_A_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A763652128C97D120052F5DE /* LonomoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LonomoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A763652528C97D120052F5DE /* LonomoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LonomoTests.swift; sourceTree = "<group>"; };
+		A763652B28C97D120052F5DE /* LonomoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LonomoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A763652F28C97D120052F5DE /* LonomoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LonomoUITests.swift; sourceTree = "<group>"; };
+		A763653128C97D120052F5DE /* LonomoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LonomoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A763653E28CF56D90052F5DE /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		A763654228CF64140052F5DE /* My project-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "My project-1.png"; sourceTree = "<group>"; };
 		A763654328D201850052F5DE /* userInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userInfo.swift; sourceTree = "<group>"; };
 		A77E3EAD28D5F02300096421 /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
 		A77E3EAF28D5F10100096421 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A77E3EB128D5F14100096421 /* AddInterests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInterests.swift; sourceTree = "<group>"; };
-		A7E682F728E5C808001D4B01 /* DoSomethingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoSomethingView.swift; sourceTree = "<group>"; };
+		A7E682F728E5C808001D4B01 /* CreatePlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlanView.swift; sourceTree = "<group>"; };
 		A7E682F928E6A7E6001D4B01 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,9 +91,9 @@
 		A763650828C97D090052F5DE = {
 			isa = PBXGroup;
 			children = (
-				A763651328C97D090052F5DE /* SM_A_ios */,
-				A763652428C97D120052F5DE /* SM_A_iosTests */,
-				A763652E28C97D120052F5DE /* SM_A_iosUITests */,
+				A763651328C97D090052F5DE /* Lonomo */,
+				A763652428C97D120052F5DE /* LonomoTests */,
+				A763652E28C97D120052F5DE /* LonomoUITests */,
 				A763651228C97D090052F5DE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,28 +101,29 @@
 		A763651228C97D090052F5DE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A763651128C97D090052F5DE /* SM_A_ios.app */,
-				A763652128C97D120052F5DE /* SM_A_iosTests.xctest */,
-				A763652B28C97D120052F5DE /* SM_A_iosUITests.xctest */,
+				A763651128C97D090052F5DE /* Lonomo.app */,
+				A763652128C97D120052F5DE /* LonomoTests.xctest */,
+				A763652B28C97D120052F5DE /* LonomoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A763651328C97D090052F5DE /* SM_A_ios */ = {
+		A763651328C97D090052F5DE /* Lonomo */ = {
 			isa = PBXGroup;
 			children = (
 				A77E3EAA28D5EC3200096421 /* Register */,
-				A763651428C97D090052F5DE /* SM_A_iosApp.swift */,
+				A763651428C97D090052F5DE /* LonomoApp.swift */,
 				A763651628C97D090052F5DE /* LoginView.swift */,
 				A763651828C97D110052F5DE /* Assets.xcassets */,
 				A763651A28C97D110052F5DE /* Preview Content */,
 				A763654328D201850052F5DE /* userInfo.swift */,
 				A77E3EAD28D5F02300096421 /* HomeStoryboard.storyboard */,
 				A77E3EAF28D5F10100096421 /* HomeView.swift */,
-				A7E682F728E5C808001D4B01 /* DoSomethingView.swift */,
+				A7E682F728E5C808001D4B01 /* CreatePlanView.swift */,
 				A7E682F928E6A7E6001D4B01 /* SearchView.swift */,
+				A71AE8AC28EB0EE6007CEC85 /* HeaderView.swift */,
 			);
-			path = SM_A_ios;
+			path = Lonomo;
 			sourceTree = "<group>";
 		};
 		A763651A28C97D110052F5DE /* Preview Content */ = {
@@ -132,21 +135,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		A763652428C97D120052F5DE /* SM_A_iosTests */ = {
+		A763652428C97D120052F5DE /* LonomoTests */ = {
 			isa = PBXGroup;
 			children = (
-				A763652528C97D120052F5DE /* SM_A_iosTests.swift */,
+				A763652528C97D120052F5DE /* LonomoTests.swift */,
 			);
-			path = SM_A_iosTests;
+			path = LonomoTests;
 			sourceTree = "<group>";
 		};
-		A763652E28C97D120052F5DE /* SM_A_iosUITests */ = {
+		A763652E28C97D120052F5DE /* LonomoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				A763652F28C97D120052F5DE /* SM_A_iosUITests.swift */,
-				A763653128C97D120052F5DE /* SM_A_iosUITestsLaunchTests.swift */,
+				A763652F28C97D120052F5DE /* LonomoUITests.swift */,
+				A763653128C97D120052F5DE /* LonomoUITestsLaunchTests.swift */,
 			);
-			path = SM_A_iosUITests;
+			path = LonomoUITests;
 			sourceTree = "<group>";
 		};
 		A77E3EAA28D5EC3200096421 /* Register */ = {
@@ -161,9 +164,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A763651028C97D090052F5DE /* SM_A_ios */ = {
+		A763651028C97D090052F5DE /* Lonomo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A763653528C97D120052F5DE /* Build configuration list for PBXNativeTarget "SM_A_ios" */;
+			buildConfigurationList = A763653528C97D120052F5DE /* Build configuration list for PBXNativeTarget "Lonomo" */;
 			buildPhases = (
 				A763650D28C97D090052F5DE /* Sources */,
 				A763650E28C97D090052F5DE /* Frameworks */,
@@ -173,14 +176,14 @@
 			);
 			dependencies = (
 			);
-			name = SM_A_ios;
+			name = Lonomo;
 			productName = SM_A_ios;
-			productReference = A763651128C97D090052F5DE /* SM_A_ios.app */;
+			productReference = A763651128C97D090052F5DE /* Lonomo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A763652028C97D120052F5DE /* SM_A_iosTests */ = {
+		A763652028C97D120052F5DE /* LonomoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A763653828C97D120052F5DE /* Build configuration list for PBXNativeTarget "SM_A_iosTests" */;
+			buildConfigurationList = A763653828C97D120052F5DE /* Build configuration list for PBXNativeTarget "LonomoTests" */;
 			buildPhases = (
 				A763651D28C97D120052F5DE /* Sources */,
 				A763651E28C97D120052F5DE /* Frameworks */,
@@ -191,14 +194,14 @@
 			dependencies = (
 				A763652328C97D120052F5DE /* PBXTargetDependency */,
 			);
-			name = SM_A_iosTests;
+			name = LonomoTests;
 			productName = SM_A_iosTests;
-			productReference = A763652128C97D120052F5DE /* SM_A_iosTests.xctest */;
+			productReference = A763652128C97D120052F5DE /* LonomoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A763652A28C97D120052F5DE /* SM_A_iosUITests */ = {
+		A763652A28C97D120052F5DE /* LonomoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A763653B28C97D120052F5DE /* Build configuration list for PBXNativeTarget "SM_A_iosUITests" */;
+			buildConfigurationList = A763653B28C97D120052F5DE /* Build configuration list for PBXNativeTarget "LonomoUITests" */;
 			buildPhases = (
 				A763652728C97D120052F5DE /* Sources */,
 				A763652828C97D120052F5DE /* Frameworks */,
@@ -209,9 +212,9 @@
 			dependencies = (
 				A763652D28C97D120052F5DE /* PBXTargetDependency */,
 			);
-			name = SM_A_iosUITests;
+			name = LonomoUITests;
 			productName = SM_A_iosUITests;
-			productReference = A763652B28C97D120052F5DE /* SM_A_iosUITests.xctest */;
+			productReference = A763652B28C97D120052F5DE /* LonomoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -237,7 +240,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A763650C28C97D090052F5DE /* Build configuration list for PBXProject "SM_A_ios" */;
+			buildConfigurationList = A763650C28C97D090052F5DE /* Build configuration list for PBXProject "Lonomo" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -250,9 +253,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A763651028C97D090052F5DE /* SM_A_ios */,
-				A763652028C97D120052F5DE /* SM_A_iosTests */,
-				A763652A28C97D120052F5DE /* SM_A_iosUITests */,
+				A763651028C97D090052F5DE /* Lonomo */,
+				A763652028C97D120052F5DE /* LonomoTests */,
+				A763652A28C97D120052F5DE /* LonomoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -290,13 +293,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A763654428D201860052F5DE /* userInfo.swift in Sources */,
-				A7E682F828E5C808001D4B01 /* DoSomethingView.swift in Sources */,
+				A71AE8AD28EB0EE6007CEC85 /* HeaderView.swift in Sources */,
+				A7E682F828E5C808001D4B01 /* CreatePlanView.swift in Sources */,
 				A77E3EB228D5F14100096421 /* AddInterests.swift in Sources */,
 				A763653F28CF56D90052F5DE /* RegisterView.swift in Sources */,
 				A7E682FA28E6A7E6001D4B01 /* SearchView.swift in Sources */,
 				A763651728C97D090052F5DE /* LoginView.swift in Sources */,
 				A77E3EB028D5F10100096421 /* HomeView.swift in Sources */,
-				A763651528C97D090052F5DE /* SM_A_iosApp.swift in Sources */,
+				A763651528C97D090052F5DE /* LonomoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A763652628C97D120052F5DE /* SM_A_iosTests.swift in Sources */,
+				A763652628C97D120052F5DE /* LonomoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,8 +316,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A763653228C97D120052F5DE /* SM_A_iosUITestsLaunchTests.swift in Sources */,
-				A763653028C97D120052F5DE /* SM_A_iosUITests.swift in Sources */,
+				A763653228C97D120052F5DE /* LonomoUITestsLaunchTests.swift in Sources */,
+				A763653028C97D120052F5DE /* LonomoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,12 +326,12 @@
 /* Begin PBXTargetDependency section */
 		A763652328C97D120052F5DE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A763651028C97D090052F5DE /* SM_A_ios */;
+			target = A763651028C97D090052F5DE /* Lonomo */;
 			targetProxy = A763652228C97D120052F5DE /* PBXContainerItemProxy */;
 		};
 		A763652D28C97D120052F5DE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A763651028C97D090052F5DE /* SM_A_ios */;
+			target = A763651028C97D090052F5DE /* Lonomo */;
 			targetProxy = A763652C28C97D120052F5DE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -454,7 +458,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SM_A_ios/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Lonomo/Preview Content\"";
 				DEVELOPMENT_TEAM = 4RP9V6BFVF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -468,7 +472,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "antonalley.SM-A-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = antonalley.Lonomo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -483,7 +487,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SM_A_ios/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Lonomo/Preview Content\"";
 				DEVELOPMENT_TEAM = 4RP9V6BFVF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -497,7 +501,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "antonalley.SM-A-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = antonalley.Lonomo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -515,12 +519,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "antonalley.SM-A-iosTests";
+				PRODUCT_BUNDLE_IDENTIFIER = antonalley.LonomoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SM_A_ios.app/SM_A_ios";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lonomo.app/Lonomo";
 			};
 			name = Debug;
 		};
@@ -534,12 +538,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "antonalley.SM-A-iosTests";
+				PRODUCT_BUNDLE_IDENTIFIER = antonalley.LonomoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SM_A_ios.app/SM_A_ios";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lonomo.app/Lonomo";
 			};
 			name = Release;
 		};
@@ -551,7 +555,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "antonalley.SM-A-iosUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = antonalley.LonomoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -568,7 +572,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "antonalley.SM-A-iosUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = antonalley.LonomoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -580,7 +584,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A763650C28C97D090052F5DE /* Build configuration list for PBXProject "SM_A_ios" */ = {
+		A763650C28C97D090052F5DE /* Build configuration list for PBXProject "Lonomo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A763653328C97D120052F5DE /* Debug */,
@@ -589,7 +593,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A763653528C97D120052F5DE /* Build configuration list for PBXNativeTarget "SM_A_ios" */ = {
+		A763653528C97D120052F5DE /* Build configuration list for PBXNativeTarget "Lonomo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A763653628C97D120052F5DE /* Debug */,
@@ -598,7 +602,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A763653828C97D120052F5DE /* Build configuration list for PBXNativeTarget "SM_A_iosTests" */ = {
+		A763653828C97D120052F5DE /* Build configuration list for PBXNativeTarget "LonomoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A763653928C97D120052F5DE /* Debug */,
@@ -607,7 +611,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A763653B28C97D120052F5DE /* Build configuration list for PBXNativeTarget "SM_A_iosUITests" */ = {
+		A763653B28C97D120052F5DE /* Build configuration list for PBXNativeTarget "LonomoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A763653C28C97D120052F5DE /* Debug */,

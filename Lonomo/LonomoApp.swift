@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct SM_A_iosApp: App {
+struct LonomoApp: App {
     var body: some Scene {
         WindowGroup {
             LoginView()

@@ -1,94 +1,117 @@
 //
-//  RegisterView.swift
+//  ContentView.swift
 //  SM_A_ios
 //
-//  Created by Anton Alley on 9/12/22.
+//  Created by Anton Alley on 9/7/22.
 //
 
 import SwiftUI
 
-struct RegisterView: View{
-    @State private var firstname = ""
-    @State private var lastname = ""
-    @State private var email = ""
+struct LoginView: View {
     @State private var username = ""
     @State private var password = ""
-    @State private var isRegistered = false
-    
+    @State private var isLoggedIn = false
+    @State private var isLoginPage = true
+    @State private var isRegisterPage = false
     @State private var user: User? = nil
     
-    
     var body: some View {
-        if isRegistered {
-            AddInterests()
-        } else {
-            register
+        // TODO check if already logged in
+        if isLoggedIn || checkLoggedInStatus() {
+            HomeView()
+        } else if isRegisterPage{
+            RegisterView()
         }
+        else {
+            login
+        }
+
     }
-    
-    var register: some View {
+    var login: some View {
         NavigationView {
             ZStack {
                 Color.orange.ignoresSafeArea()
+                VStack{
+                    Image("TribeFullTransparent")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width:350, height: 350)
+                        .offset(y:75)
+                        .padding()
+                        
+                
+                    Spacer()
+                }
                 
                 VStack {
-                    Text("Register")
-                        .font(.largeTitle)
-                        .bold()
-                        .padding()
-                    TextField("First Name", text: $firstname)
-                        .padding()
-                        .frame(width:300, height:50)
-                        .background(Color.black.opacity(0.1))
-                        .cornerRadius(10)
-                    TextField("Last Name", text: $lastname)
-                        .padding()
-                        .frame(width:300, height:50)
-                        .background(Color.black.opacity(0.1))
-                        .cornerRadius(10)
-                    TextField("Email", text: $email)
-                        .padding()
-                        .frame(width:300, height:50)
-                        .background(Color.black.opacity(0.1))
-                        .cornerRadius(10)
-                        .autocapitalization(.none)
                     TextField("Username", text: $username)
                         .padding()
                         .frame(width:300, height:50)
                         .background(Color.black.opacity(0.1))
                         .cornerRadius(10)
                         .autocapitalization(.none)
+//                        .textCase(.lowercase)
                     SecureField("Password", text: $password)
                         .padding()
                         .frame(width:300, height:50)
                         .background(Color.black.opacity(0.1))
                         .cornerRadius(10)
-                    Spacer()
-                    Button("Register"){
-                        registerUser(username: username, password: password, firstName: firstname, lastName:lastname, email:email)
+                    
+                    Button("Login"){
+                        authenticateUser(username: username, password: password)
                     }
                     .foregroundColor(Color.white)
                     .frame(width:300, height:50)
                     .background(Color.white.opacity(0.2))
                     .cornerRadius(10)
-                    .padding()
                     
-//                    NavigationLink(destination: Text("You are registered as @\(username)"), isActive: $isRegistered) {
+//                    NavigationLink(destination: Text("You are logged in as @\(username)"), isActive: $isLoggedIn) {
 //                        EmptyView()
 //                    }
                     
                 }
+                VStack{
+                    Spacer()
+//                    NavigationLink(destination: RegisterView()){
+                        Button("New Account? Sign Up")
+                        {
+                            isLoginPage = false
+                            isRegisterPage = true
+                        }
+                        .padding()
+                        .foregroundColor(Color.white)
+//                    }
+                }
             }.navigationBarHidden(true)
         }
     }
-    func registerUser(username:String, password:String, firstName:String, lastName:String, email:String) {
-        guard let url = URL(string: "http://10.3.114.18/user/register/") else {
+    
+    func checkLoggedInStatus() -> Bool{
+        // TODO
+        // Check to see if User and authtoken already stored
+        return false
+    }
+    
+    func authenticateUser(username: String, password: String){
+        UserDefaults.standard.set("TestUser", forKey: "username")
+        UserDefaults.standard.set("testAUTHTOKEN", forKey: "authtoken")
+        isLoggedIn = true
+        isLoginPage = false
+    }
+    
+    func authenticateUserBack(username: String, password: String){
+//        if username == "Anton" && password == "test" {
+//            isLoggedIn = true
+//            isLoginPage = false
+//        }
+        
+        guard let url = URL(string: "http://10.3.114.18/user/login/") else {
             print("api is down")
             return
         }
         
-        let toRegister = RegisterRequest(username: username, password: password, email: email, first_name: firstName, last_name: lastName)
-        guard let encoded = try? JSONEncoder().encode(toRegister) else {
+        let toLogin = LoginRequest(username: username, password: password)
+        guard let encoded = try? JSONEncoder().encode(toLogin) else {
                     print("failed to encode")
                     return
                 }
@@ -109,9 +132,8 @@ struct RegisterView: View{
                             self.user = response
                             UserDefaults.standard.set(self.user?.username, forKey: "username")
                             UserDefaults.standard.set(self.user?.authtoken, forKey: "authtoken")
-                            isRegistered = true
-//                            isLoggedIn = true
-//                            isLoginPage = false
+                            isLoggedIn = true
+                            isLoginPage = false
                         } else {
                             print("Failed to Login")
                         }
@@ -122,11 +144,13 @@ struct RegisterView: View{
             }
             
         }.resume()
+        
     }
 }
 
-struct RegisterView_Previews: PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView()
+        LoginView()
+            .previewDevice("iPhone 11")
     }
 }
