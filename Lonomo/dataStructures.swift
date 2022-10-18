@@ -7,13 +7,36 @@
 
 import Foundation
 
-struct Dosumm: Codable, Hashable, Identifiable {
+struct Plan: Codable, Hashable, Identifiable {
     var id: Int
     var name: String
-    var location: String
+    var location: Location
     var time: String
-    var who: String // TODO Will change, maybe a different struct?
-    
+    var who: WhoDetail?
+    var user_is_going: Bool
+}
+
+struct WhoDetail: Codable, Hashable {
+    var interests: Array<InterestForPlan>
+    var skill: Int? // 1- Beginner 2- Intermediate 3- Advanced
+    var radius: Float? // The radius that encompasses who is invited
+    var center: Location
+    var min_people: Int
+    var max_people: Int
+    var num_going: Int
+}
+
+struct Location: Codable, Hashable {
+    var name: String
+    var x: Float
+    var y: Float
+}
+
+struct InterestForPlan: Codable, Hashable, Identifiable{
+    var id: Int
+    var name: String
+    var weight: Int
+    var num_people_included: Int
 }
 
 struct Interest: Codable, Hashable, Identifiable {

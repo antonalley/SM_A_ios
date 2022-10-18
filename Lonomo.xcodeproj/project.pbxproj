@@ -16,10 +16,14 @@
 		A763653028C97D120052F5DE /* LonomoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763652F28C97D120052F5DE /* LonomoUITests.swift */; };
 		A763653228C97D120052F5DE /* LonomoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763653128C97D120052F5DE /* LonomoUITestsLaunchTests.swift */; };
 		A763653F28CF56D90052F5DE /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763653E28CF56D90052F5DE /* RegisterView.swift */; };
-		A763654428D201860052F5DE /* userInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763654328D201850052F5DE /* userInfo.swift */; };
-		A77E3EAE28D5F02300096421 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A77E3EAD28D5F02300096421 /* HomeStoryboard.storyboard */; };
+		A763654428D201860052F5DE /* dataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763654328D201850052F5DE /* dataStructures.swift */; };
 		A77E3EB028D5F10100096421 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E3EAF28D5F10100096421 /* HomeView.swift */; };
 		A77E3EB228D5F14100096421 /* AddInterests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E3EB128D5F14100096421 /* AddInterests.swift */; };
+		A780F9C328FA8EF3000DED5C /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = A780F9C228FA8EF3000DED5C /* WrappingHStack */; };
+		A780F9C828FE4E63000DED5C /* LocalSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A780F9C728FE4E63000DED5C /* LocalSearchService.swift */; };
+		A780F9CC28FE4FEB000DED5C /* MKCoordinateRegionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A780F9CB28FE4FEB000DED5C /* MKCoordinateRegionExtensions.swift */; };
+		A780F9CE28FE593A000DED5C /* ChooseLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A780F9CD28FE593A000DED5C /* ChooseLocationView.swift */; };
+		A7D9C26728F51B9B0078C2F5 /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D9C26628F51B9B0078C2F5 /* PlanView.swift */; };
 		A7E682F828E5C808001D4B01 /* CreatePlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E682F728E5C808001D4B01 /* CreatePlanView.swift */; };
 		A7E682FA28E6A7E6001D4B01 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E682F928E6A7E6001D4B01 /* SearchView.swift */; };
 /* End PBXBuildFile section */
@@ -55,10 +59,13 @@
 		A763653128C97D120052F5DE /* LonomoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LonomoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A763653E28CF56D90052F5DE /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		A763654228CF64140052F5DE /* My project-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "My project-1.png"; sourceTree = "<group>"; };
-		A763654328D201850052F5DE /* userInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userInfo.swift; sourceTree = "<group>"; };
-		A77E3EAD28D5F02300096421 /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
+		A763654328D201850052F5DE /* dataStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataStructures.swift; sourceTree = "<group>"; };
 		A77E3EAF28D5F10100096421 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A77E3EB128D5F14100096421 /* AddInterests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInterests.swift; sourceTree = "<group>"; };
+		A780F9C728FE4E63000DED5C /* LocalSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSearchService.swift; sourceTree = "<group>"; };
+		A780F9CB28FE4FEB000DED5C /* MKCoordinateRegionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegionExtensions.swift; sourceTree = "<group>"; };
+		A780F9CD28FE593A000DED5C /* ChooseLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLocationView.swift; sourceTree = "<group>"; };
+		A7D9C26628F51B9B0078C2F5 /* PlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
 		A7E682F728E5C808001D4B01 /* CreatePlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlanView.swift; sourceTree = "<group>"; };
 		A7E682F928E6A7E6001D4B01 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A780F9C328FA8EF3000DED5C /* WrappingHStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,17 +119,20 @@
 		A763651328C97D090052F5DE /* Lonomo */ = {
 			isa = PBXGroup;
 			children = (
+				A780F9CA28FE4FD2000DED5C /* Extensions */,
+				A780F9C628FE4E4D000DED5C /* Services */,
 				A77E3EAA28D5EC3200096421 /* Register */,
 				A763651428C97D090052F5DE /* LonomoApp.swift */,
 				A763651628C97D090052F5DE /* LoginView.swift */,
 				A763651828C97D110052F5DE /* Assets.xcassets */,
 				A763651A28C97D110052F5DE /* Preview Content */,
-				A763654328D201850052F5DE /* userInfo.swift */,
-				A77E3EAD28D5F02300096421 /* HomeStoryboard.storyboard */,
+				A763654328D201850052F5DE /* dataStructures.swift */,
 				A77E3EAF28D5F10100096421 /* HomeView.swift */,
 				A7E682F728E5C808001D4B01 /* CreatePlanView.swift */,
 				A7E682F928E6A7E6001D4B01 /* SearchView.swift */,
 				A71AE8AC28EB0EE6007CEC85 /* HeaderView.swift */,
+				A7D9C26628F51B9B0078C2F5 /* PlanView.swift */,
+				A780F9CD28FE593A000DED5C /* ChooseLocationView.swift */,
 			);
 			path = Lonomo;
 			sourceTree = "<group>";
@@ -161,6 +172,22 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		A780F9C628FE4E4D000DED5C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A780F9C728FE4E63000DED5C /* LocalSearchService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A780F9CA28FE4FD2000DED5C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A780F9CB28FE4FEB000DED5C /* MKCoordinateRegionExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,6 +204,9 @@
 			dependencies = (
 			);
 			name = Lonomo;
+			packageProductDependencies = (
+				A780F9C228FA8EF3000DED5C /* WrappingHStack */,
+			);
 			productName = SM_A_ios;
 			productReference = A763651128C97D090052F5DE /* Lonomo.app */;
 			productType = "com.apple.product-type.application";
@@ -249,6 +279,9 @@
 				Base,
 			);
 			mainGroup = A763650828C97D090052F5DE;
+			packageReferences = (
+				A780F9C128FA8EF3000DED5C /* XCRemoteSwiftPackageReference "WrappingHStack" */,
+			);
 			productRefGroup = A763651228C97D090052F5DE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -267,7 +300,6 @@
 			files = (
 				A763651C28C97D110052F5DE /* Preview Assets.xcassets in Resources */,
 				A763651928C97D110052F5DE /* Assets.xcassets in Resources */,
-				A77E3EAE28D5F02300096421 /* HomeStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,15 +324,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A763654428D201860052F5DE /* userInfo.swift in Sources */,
+				A763654428D201860052F5DE /* dataStructures.swift in Sources */,
+				A780F9C828FE4E63000DED5C /* LocalSearchService.swift in Sources */,
 				A71AE8AD28EB0EE6007CEC85 /* HeaderView.swift in Sources */,
+				A780F9CE28FE593A000DED5C /* ChooseLocationView.swift in Sources */,
 				A7E682F828E5C808001D4B01 /* CreatePlanView.swift in Sources */,
 				A77E3EB228D5F14100096421 /* AddInterests.swift in Sources */,
 				A763653F28CF56D90052F5DE /* RegisterView.swift in Sources */,
+				A780F9CC28FE4FEB000DED5C /* MKCoordinateRegionExtensions.swift in Sources */,
 				A7E682FA28E6A7E6001D4B01 /* SearchView.swift in Sources */,
 				A763651728C97D090052F5DE /* LoginView.swift in Sources */,
 				A77E3EB028D5F10100096421 /* HomeView.swift in Sources */,
 				A763651528C97D090052F5DE /* LonomoApp.swift in Sources */,
+				A7D9C26728F51B9B0078C2F5 /* PlanView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +498,7 @@
 				DEVELOPMENT_TEAM = 4RP9V6BFVF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to automatically choose your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -491,6 +528,7 @@
 				DEVELOPMENT_TEAM = 4RP9V6BFVF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to automatically choose your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -554,6 +592,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to automatically choose your location";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = antonalley.LonomoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -571,6 +610,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to automatically choose your location";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = antonalley.LonomoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -621,6 +661,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A780F9C128FA8EF3000DED5C /* XCRemoteSwiftPackageReference "WrappingHStack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dkk/WrappingHStack";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A780F9C228FA8EF3000DED5C /* WrappingHStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A780F9C128FA8EF3000DED5C /* XCRemoteSwiftPackageReference "WrappingHStack" */;
+			productName = WrappingHStack;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A763650928C97D090052F5DE /* Project object */;
 }

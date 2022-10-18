@@ -30,16 +30,16 @@ struct LoginView: View {
     var login: some View {
         NavigationView {
             ZStack {
-                Color.orange.ignoresSafeArea()
+                Color(UIColor(named:"LonomoOrange") ?? .orange).ignoresSafeArea()
                 VStack{
-                    Image("TribeFullTransparent")
+                    Image("Lonomo Full Transparent-1")
                         .resizable()
                         .scaledToFit()
                         .frame(width:350, height: 350)
                         .offset(y:75)
                         .padding()
-                        
-                
+                    
+                    
                     Spacer()
                 }
                 
@@ -50,7 +50,7 @@ struct LoginView: View {
                         .background(Color.black.opacity(0.1))
                         .cornerRadius(10)
                         .autocapitalization(.none)
-//                        .textCase(.lowercase)
+                    //                        .textCase(.lowercase)
                     SecureField("Password", text: $password)
                         .padding()
                         .frame(width:300, height:50)
@@ -62,28 +62,30 @@ struct LoginView: View {
                     }
                     .foregroundColor(Color.white)
                     .frame(width:300, height:50)
-                    .background(Color.white.opacity(0.2))
+                    .background(Color.white.opacity(0.25))
                     .cornerRadius(10)
                     
-//                    NavigationLink(destination: Text("You are logged in as @\(username)"), isActive: $isLoggedIn) {
-//                        EmptyView()
-//                    }
+                    //                    NavigationLink(destination: Text("You are logged in as @\(username)"), isActive: $isLoggedIn) {
+                    //                        EmptyView()
+                    //                    }
                     
                 }
                 VStack{
                     Spacer()
-//                    NavigationLink(destination: RegisterView()){
-                        Button("New Account? Sign Up")
-                        {
-                            isLoginPage = false
-                            isRegisterPage = true
-                        }
-                        .padding()
-                        .foregroundColor(Color.white)
-//                    }
+                    //                    NavigationLink(destination: RegisterView()){
+                    Button("New Account? Sign Up")
+                    {
+                        isLoginPage = false
+                        isRegisterPage = true
+                    }
+                    .padding()
+                    .foregroundColor(Color.white)
+                    //                    }
                 }
             }.navigationBarHidden(true)
+//                .background(UIColor(named: "LonomoOrange"))
         }
+        
     }
     
     func checkLoggedInStatus() -> Bool{

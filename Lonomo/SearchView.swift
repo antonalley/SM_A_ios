@@ -27,7 +27,7 @@ struct SearchView: View {
                     Image(systemName: "magnifyingglass").padding()
                     TextField("Find something to do...", text: $searchText)
                 }.foregroundColor(Color.gray)
-                    .frame(width:330, height:50)
+                    .frame(width:partial_width(percent: 0.95), height:50)
                     .background(Color.black.opacity(0.1))
                     .cornerRadius(10)
                     .padding()
@@ -39,9 +39,9 @@ struct SearchView: View {
                                 Text(dosumm.name).font(.title2)
                                 Text(dosumm.time)
                             }
-                            Text("@\(dosumm.location)")
+                            Text("@\(dosumm.location.name)")
                         }.padding()
-                            .frame(width: 300)
+                            .frame(width: partial_width(percent: 0.9))
                             .background(
                                 RoundedRectangle(cornerRadius: 10)
                                     .fill(Color.black.opacity(0.1))
@@ -50,7 +50,7 @@ struct SearchView: View {
                         
                     }.foregroundColor(Color.gray)
                 }.padding()
-                    .frame(width:330)
+                    .frame(width:partial_width(percent: 0.95))
                     .cornerRadius(10)
                 
                 Spacer()
@@ -58,30 +58,35 @@ struct SearchView: View {
         }
     }
     
-    func get_activities(search: String) -> Array<Dosumm>{
+    func get_activities(search: String) -> Array<Plan>{
         //TODO Get from backend
         return [
-            Dosumm(
-                id: 2,
-                name: "Pickup Vollyball",
-                location: "Glenwood courts",
-                time: "Th 7pm",
-                who: "any"
-            ),
-            Dosumm(
+            Plan(
                 id: 1,
-                name: "Movie Night",
-                location: "Glenwood apt 114",
-                time: "Fri 8pm",
-                who: "any"
+                name: "Pickup Vollyball",
+                location: Location(name:"Glenwood courts", x:0, y:0),
+                time: "Th 7pm",
+                user_is_going: true
+//                who: WhoDetail(
             ),
-            Dosumm(
+            Plan(
+                id: 2,
+                name: "Hike Mt Timp",
+                location: Location(name:"trailhead", x:0, y:0),
+                time: "Th 7pm",
+                user_is_going: true
+//                who: WhoDetail(
+            ),
+            Plan(
                 id: 3,
-                name: "Hike Mt timp",
-                location: "AF Canyon trailhead",
-                time: "SA 9am",
-                who: "any"
+                name: "Potluck",
+                location: Location(name:"My Apartment", x:0, y:0),
+                time: "Th 7pm",
+                user_is_going: true
+//                who: WhoDetail(
             ),
+            
+            
         ]
     }
 }

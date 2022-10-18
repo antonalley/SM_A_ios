@@ -20,8 +20,12 @@ struct HeaderView: View {
                 
                 
             }.frame(height:65)
-//                .background(Color.orange)
-//                .shadow(radius: 5)
+//                .background(RoundedRectangle(cornerRadius: 0)
+//                    .fill(Color.white)
+//                )
+//                .compositingGroup()
+//                .shadow(radius:4,x:0,y:1)
+            
             Spacer()
         }
     }

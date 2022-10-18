@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WrappingHStack
 
 extension AnyTransition {
     static var moveFadeDown: AnyTransition {
@@ -16,6 +17,10 @@ extension AnyTransition {
         )
         
     }
+}
+
+func partial_width(percent: Float) -> CGFloat{
+    return UIScreen.main.bounds.width * CGFloat(percent)
 }
 
 struct HomeView: View {
@@ -35,43 +40,42 @@ struct HomeView: View {
             ZStack{
                 HeaderView()
                 VStack{
-                    Spacer()
-                    NavigationLink(destination:CreatePlanView()){
-                    Text("Do something...                            +").foregroundColor(Color.white)
-                            .frame(width:330, height:50)
-                            .background(Color.blue)
-                            .cornerRadius(10)
-                            .padding()
-                    }
-                    
-                    
-                    VStack{
-                        Text("Your Plans")
-                            .foregroundColor(Color.white)
-                            .font(.title)
-                        ScrollView{
-                            ForEach(get_calendar()){ dosumm in
-                                HStack{
-                                    VStack{
-                                        Text(dosumm.name).font(.title2).foregroundColor(Color.white)
-                                        Text(dosumm.time)
-                                    }
-                                    Text("@\(dosumm.location)")
+                    Spacer().frame(height:100)
+                    ScrollView{
+                        NavigationLink(destination:CreatePlanView()){
+                            Text("\tMake Plans").foregroundColor(Color.white)
+                                .frame(width:partial_width(percent: 0.95), height:70, alignment: .leading)
+                                .background(Color(UIColor(named:"ButtonBlue") ?? .blue))
+                                .cornerRadius(10)
+                                .padding()
+                                .shadow(radius:2, x:0, y:2)
+                        }
+                        
+                        
+                        ForEach(get_calendar()){ dosumm in
+                            NavigationLink(destination: PlanView(plan:dosumm)){                           VStack{
+                                Text("\t\(dosumm.name)  @\(dosumm.time)")
+                                    .foregroundColor(Color.white)
+                                    .bold()
+                                Text(dosumm.location.name)
+                                    .foregroundColor(Color.gray)
+                                    .frame(alignment:.leading)
+                                
                                 }.padding()
-                                    .frame(width: 300)
+                                    .frame(width: partial_width(percent: 0.95), alignment: .leading)
                                     .background(
                                         RoundedRectangle(cornerRadius: 10)
-                                            .fill(Color.white.opacity(0.2))
+                                            .fill(Color(UIColor(named:"LonomoOrange") ?? .orange))
                                         //                                .shadow(color: .black, radius:6, x:4, y:4)
                                     )
-                                    .cornerRadius(10)
-                                
-                            }.foregroundColor(Color.white)
-                        }.frame(height:300)
-                    }.padding()
-                        .background(Color.orange)
-                        .frame(width:330)
-                        .cornerRadius(10)
+                                    .compositingGroup()
+                                    .shadow(radius:2, x:0, y:2)
+                            }
+                            
+                            
+                        }
+                    }
+                    
                     
                     Spacer()
                     
@@ -81,7 +85,7 @@ struct HomeView: View {
                             Text("Find something to do...")
                             Spacer()
                         }.foregroundColor(Color.gray)
-                            .frame(width:330, height:50)
+                        .frame(width:partial_width(percent: 0.95), height:50)
                             .background(colorScheme == .dark ? Color.white.opacity(0.1) : Color.black.opacity(0.1))
                             .cornerRadius(10)
                             .padding()
@@ -99,51 +103,35 @@ struct HomeView: View {
         }
     }
     
-    func get_calendar() -> Array<Dosumm>{
+    func get_calendar() -> Array<Plan>{
         //TODO Get from backend
         return [
-            Dosumm(
+            Plan(
                 id: 1,
-                name: "Pickup Vollyball",
-                location: "Glenwood courts",
+                name: "Pickup Volleyball",
+                location: Location(name:"Glenwood courts", x:0, y:0),
                 time: "Th 7pm",
-                who: "any"
+                user_is_going: true
+//                who: WhoDetail(
             ),
-            Dosumm(
+            Plan(
                 id: 2,
-                name: "Movie Night",
-                location: "Glenwood apt 114",
-                time: "Fri 8pm",
-                who: "any"
-            ),
-            Dosumm(
-                id: 3,
-                name: "Hike Mt timp",
-                location: "AF Canyon trailhead",
-                time: "SA 9am",
-                who: "any"
-            ),
-            Dosumm(
-                id: 4,
-                name: "Pickup Vollyball",
-                location: "Glenwood courts",
+                name: "Hike Mt Timp",
+                location: Location(name:"trailhead", x:0, y:0),
                 time: "Th 7pm",
-                who: "any"
+                user_is_going: true
+//                who: WhoDetail(
             ),
-            Dosumm(
-                id: 5,
-                name: "Movie Night",
-                location: "Glenwood apt 114",
-                time: "Fri 8pm",
-                who: "any"
+            Plan(
+                id: 3,
+                name: "Potluck",
+                location: Location(name:"My Apartment", x:0, y:0),
+                time: "Th 7pm",
+                user_is_going: true
+//                who: WhoDetail(
             ),
-            Dosumm(
-                id: 6,
-                name: "Hike Mt timp",
-                location: "AF Canyon trailhead",
-                time: "SA 9am",
-                who: "any"
-            ),
+            
+            
         ]
     }
 }
