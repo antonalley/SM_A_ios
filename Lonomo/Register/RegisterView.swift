@@ -20,7 +20,8 @@ struct RegisterView: View{
     
     var body: some View {
         if isRegistered {
-            AddInterests()
+//            AddInterests()
+            HomeView()
         } else {
             register
         }
@@ -82,15 +83,15 @@ struct RegisterView: View{
         }
     }
     
-    func registerUser(username:String, password:String, firstName:String, lastName:String, email:String) {
+    func registerUser_fake(username:String, password:String, firstName:String, lastName:String, email:String) {
         // TODO delete this function, change name registerUserBack
         UserDefaults.standard.set("testUser", forKey: "username")
         UserDefaults.standard.set("testAUTHTOKEN", forKey: "authtoken")
         isRegistered = true
     }
     
-    func registerUserBack(username:String, password:String, firstName:String, lastName:String, email:String) {
-        guard let url = URL(string: "http://10.3.114.18/user/register/") else {
+    func registerUser(username:String, password:String, firstName:String, lastName:String, email:String) {
+        guard let url = URL(string: "http://45.58.32.232:8000/user/register/") else {
             print("api is down")
             return
         }
@@ -117,6 +118,7 @@ struct RegisterView: View{
                             self.user = response
                             UserDefaults.standard.set(self.user?.username, forKey: "username")
                             UserDefaults.standard.set(self.user?.authtoken, forKey: "authtoken")
+                            UserDefaults.standard.set(self.user?.personID, forKey: "personID")
                             isRegistered = true
 //                            isLoggedIn = true
 //                            isLoginPage = false

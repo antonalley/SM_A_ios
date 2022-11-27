@@ -41,15 +41,13 @@ struct ChooseLocationView: View {
                             }
                         }
                 }.frame(height:150)
-            } else {
-                //TODO ?
             }
             
-            Map(coordinateRegion: $viewModel.region, showsUserLocation: true, annotationItems: search_service.landmarks) { landmark in
+            Map(coordinateRegion: $search_service.region, showsUserLocation: true, annotationItems: search_service.landmarks) { landmark in
                  MapAnnotation(coordinate:landmark.coordinate) {
                      if landmark == search_service.landmark {
                          Image(systemName: "mappin.square.fill")
-                         Text(landmark.name)
+                         Text(search_service.landmark!.name)
                      }
                 }
                

@@ -17,20 +17,22 @@ struct LoginView: View {
     
     var body: some View {
         // TODO check if already logged in
-        if isLoggedIn || checkLoggedInStatus() {
+        if isLoggedIn {
             HomeView()
         } else if isRegisterPage{
             RegisterView()
         }
         else {
-            login
+            login.onAppear(perform: checkLoggedInStatus)
         }
 
     }
+    
     var login: some View {
         NavigationView {
             ZStack {
-                Color(UIColor(named:"LonomoOrange") ?? .orange).ignoresSafeArea()
+//                Color(UIColor(named:"LonomoOrange") ?? .orange).ignoresSafeArea()
+                Color.orange.ignoresSafeArea()
                 VStack{
                     Image("Lonomo Full Transparent-1")
                         .resizable()
@@ -88,26 +90,53 @@ struct LoginView: View {
         
     }
     
-    func checkLoggedInStatus() -> Bool{
+//    func checkLoggedInStatus(){
+//        return;
+//    }
+    func checkLoggedInStatus(){
+        
         // TODO
         // Check to see if User and authtoken already stored
-        return false
+        // Must verify with backend too
+        if (UserDefaults.standard.string(forKey: "authtoken") != nil){
+            let authtoken = UserDefaults.standard.string(forKey: "authtoken") ?? ""
+            guard let url = URL(string: "http://45.58.32.232:8000/user/") else {
+                print("api is down")
+                return
+            }
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            request.addValue("application/json", forHTTPHeaderField: "Accept")
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.addValue("Token \(authtoken)", forHTTPHeaderField: "Authorization")
+            URLSession.shared.dataTask(with: request) { data, response, error in
+                guard let httpResponse = response as? HTTPURLResponse else { return; }
+                
+                if httpResponse.statusCode == 200 {
+                    isLoggedIn = true
+                    isLoginPage = false
+                }
+                return
+                
+            }.resume()
+        }
     }
     
-    func authenticateUser(username: String, password: String){
+    func authenticateUser_fake(username: String, password: String){
         UserDefaults.standard.set("TestUser", forKey: "username")
         UserDefaults.standard.set("testAUTHTOKEN", forKey: "authtoken")
         isLoggedIn = true
         isLoginPage = false
     }
     
-    func authenticateUserBack(username: String, password: String){
+    func authenticateUser(username: String, password: String){
 //        if username == "Anton" && password == "test" {
 //            isLoggedIn = true
 //            isLoginPage = false
 //        }
         
-        guard let url = URL(string: "http://10.3.114.18/user/login/") else {
+        
+        guard let url = URL(string: "http://45.58.32.232:8000/user/login/") else {
             print("api is down")
             return
         }
@@ -134,6 +163,7 @@ struct LoginView: View {
                             self.user = response
                             UserDefaults.standard.set(self.user?.username, forKey: "username")
                             UserDefaults.standard.set(self.user?.authtoken, forKey: "authtoken")
+                            UserDefaults.standard.set(self.user?.personID, forKey: "personID")
                             isLoggedIn = true
                             isLoginPage = false
                         } else {

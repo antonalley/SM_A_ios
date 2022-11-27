@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A71AE8AD28EB0EE6007CEC85 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AE8AC28EB0EE6007CEC85 /* HeaderView.swift */; };
+		A74D15FE292ED767002AF228 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74D15FD292ED767002AF228 /* ListItem.swift */; };
+		A74D1602292ED996002AF228 /* eventTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74D1601292ED996002AF228 /* eventTile.swift */; };
 		A763651528C97D090052F5DE /* LonomoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763651428C97D090052F5DE /* LonomoApp.swift */; };
 		A763651728C97D090052F5DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763651628C97D090052F5DE /* LoginView.swift */; };
 		A763651928C97D110052F5DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A763651828C97D110052F5DE /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		A71AE8AC28EB0EE6007CEC85 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		A74D15FD292ED767002AF228 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		A74D1601292ED996002AF228 /* eventTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventTile.swift; sourceTree = "<group>"; };
 		A763651128C97D090052F5DE /* Lonomo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lonomo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A763651428C97D090052F5DE /* LonomoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LonomoApp.swift; sourceTree = "<group>"; };
 		A763651628C97D090052F5DE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -96,6 +100,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A74D15FF292ED8DE002AF228 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				A74D15FD292ED767002AF228 /* ListItem.swift */,
+				A7E682F928E6A7E6001D4B01 /* SearchView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		A74D1600292ED962002AF228 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A77E3EAF28D5F10100096421 /* HomeView.swift */,
+				A74D1601292ED996002AF228 /* eventTile.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A74D16032932C230002AF228 /* CreateEvent */ = {
+			isa = PBXGroup;
+			children = (
+				A7E682F728E5C808001D4B01 /* CreatePlanView.swift */,
+				A780F9CD28FE593A000DED5C /* ChooseLocationView.swift */,
+			);
+			path = CreateEvent;
+			sourceTree = "<group>";
+		};
 		A763650828C97D090052F5DE = {
 			isa = PBXGroup;
 			children = (
@@ -119,20 +150,19 @@
 		A763651328C97D090052F5DE /* Lonomo */ = {
 			isa = PBXGroup;
 			children = (
+				A74D16032932C230002AF228 /* CreateEvent */,
+				A74D1600292ED962002AF228 /* Home */,
+				A74D15FF292ED8DE002AF228 /* Search */,
 				A780F9CA28FE4FD2000DED5C /* Extensions */,
 				A780F9C628FE4E4D000DED5C /* Services */,
 				A77E3EAA28D5EC3200096421 /* Register */,
 				A763651428C97D090052F5DE /* LonomoApp.swift */,
 				A763651628C97D090052F5DE /* LoginView.swift */,
 				A763651828C97D110052F5DE /* Assets.xcassets */,
-				A763651A28C97D110052F5DE /* Preview Content */,
 				A763654328D201850052F5DE /* dataStructures.swift */,
-				A77E3EAF28D5F10100096421 /* HomeView.swift */,
-				A7E682F728E5C808001D4B01 /* CreatePlanView.swift */,
-				A7E682F928E6A7E6001D4B01 /* SearchView.swift */,
 				A71AE8AC28EB0EE6007CEC85 /* HeaderView.swift */,
 				A7D9C26628F51B9B0078C2F5 /* PlanView.swift */,
-				A780F9CD28FE593A000DED5C /* ChooseLocationView.swift */,
+				A763651A28C97D110052F5DE /* Preview Content */,
 			);
 			path = Lonomo;
 			sourceTree = "<group>";
@@ -332,9 +362,11 @@
 				A77E3EB228D5F14100096421 /* AddInterests.swift in Sources */,
 				A763653F28CF56D90052F5DE /* RegisterView.swift in Sources */,
 				A780F9CC28FE4FEB000DED5C /* MKCoordinateRegionExtensions.swift in Sources */,
+				A74D15FE292ED767002AF228 /* ListItem.swift in Sources */,
 				A7E682FA28E6A7E6001D4B01 /* SearchView.swift in Sources */,
 				A763651728C97D090052F5DE /* LoginView.swift in Sources */,
 				A77E3EB028D5F10100096421 /* HomeView.swift in Sources */,
+				A74D1602292ED996002AF228 /* eventTile.swift in Sources */,
 				A763651528C97D090052F5DE /* LonomoApp.swift in Sources */,
 				A7D9C26728F51B9B0078C2F5 /* PlanView.swift in Sources */,
 			);
