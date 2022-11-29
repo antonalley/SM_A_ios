@@ -42,8 +42,8 @@ struct CreatePlanView: View {
 //            HeaderView()
             NavigationView{
                 VStack {
-                    Text("Create Plan").font(.title)
-                    TextField("What?", text:$what)
+                    Text("Create Event").font(.title)
+                    TextField("Title...", text:$what)
                         .padding()
                         .frame(width:formWidth, height:50)
                         .background(Color(UIColor(named:"BoxedColor") ?? .black))
@@ -62,9 +62,13 @@ struct CreatePlanView: View {
                         .cornerRadius(10)
                     
                     HStack{
-                        Image(systemName: "map")
+//                        Spacer()
+//                        Image(systemName: "map")
 //                        Text("Where?")
-                        Text(search_service.landmark != nil ? search_service.landmark!.name : "Where?")
+                        Text(search_service.landmark != nil ? search_service.landmark!.name : "Choose Location")
+//                        Spacer()
+                        Image(systemName: "location.fill")
+                            .foregroundColor(.blue.opacity(0.7))
                     }.onTapGesture {
                         isMap = true
                     }.padding()
@@ -72,10 +76,29 @@ struct CreatePlanView: View {
                         .background(Color(UIColor(named:"BoxedColor") ?? .black))
                         .cornerRadius(10)
                     
+                    HStack{
+                        Text("Group Size")
+                            .bold()
+                        Spacer()
+                        Text("\(numPeople)")
+                            .padding(.trailing, 10)
+                            .padding(.leading, 10)
+                            .padding(5)
+                            .background(Color.black.opacity(0.2))
+                            .cornerRadius(20)
+                        Spacer()
+                        Stepper("", value:$numPeople, in:2...20)
+                    }.padding()
+                        .frame(width:formWidth, height:50)
+                        .background(Color(UIColor(named:"BoxedColor") ?? .black))
+                        .cornerRadius(10)
+                        
+                    
 
                     WrappingHStack(get_who_info(), id:\.self, lineSpacing: 10) { interest in
-                        if interest.name == "Who?" {
+                        if interest.name == "Crowd Vibes" {
                             Text(interest.name)
+                                .bold()
                                 .padding(5)
                         } else if interest.name == "Add+" {
                             Text(interest.name)
@@ -136,10 +159,10 @@ struct CreatePlanView: View {
     
     var add_interest_view: some View {
         VStack{
-            HStack{
-                Stepper("Group Size: \(numPeople)", value:$numPeople)
-            }.frame(width:partial_width(percent: 0.50), height:50)
-                .padding(.top)
+//            HStack{
+//                Stepper("Group Size: \(numPeople)", value:$numPeople)
+//            }.frame(width:partial_width(percent: 0.50), height:50)
+//                .padding(.top)
 
             HStack{
                 Image(systemName: "magnifyingglass").padding()
@@ -183,8 +206,8 @@ struct CreatePlanView: View {
     
     func get_who_info() -> Array<InterestForPlan> {
         var x = Array<InterestForPlan>()
-        x.append(InterestForPlan(id: 0, name: "Who?", weight: 0, num_people_included: 0))
-        x.append(InterestForPlan(id: -2, name: "\(numPeople) People", weight: 0, num_people_included: numPeople))
+        x.append(InterestForPlan(id: 0, name: "Crowd Vibes", weight: 0, num_people_included: 0))
+//        x.append(InterestForPlan(id: -2, name: "\(numPeople) People", weight: 0, num_people_included: numPeople))
         for interest in who_interests {
             x.append(interest)
         }
@@ -219,6 +242,7 @@ struct CreatePlanView: View {
             guard let httpResponse = response as? HTTPURLResponse else { return; }
             
             if httpResponse.statusCode >= 200 && httpResponse.statusCode < 300 {
+                // TODO reset current Location selected to none
                 isdosomethingview = false
             }
             return
